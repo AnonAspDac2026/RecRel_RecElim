@@ -3,12 +3,14 @@
 
 using complex_t = std::complex<float>;
 
+
 void r_fft_aux(int n,
                const complex_t& wn,
                const complex_t* pIn,
                int sIn,
                complex_t* pOut,
                int sOut) {
+
     if (n == 1) {
         pOut[0] = pIn[0];
     } else if (n == 2) {
@@ -18,20 +20,19 @@ void r_fft_aux(int n,
         pOut[0]       = a;
         pOut[sOut]    = b;
     } else {
-        int half = n / 2;
+        n = n / 2;
         // Recursive calls
-        r_fft_aux(half, wn * wn, pIn,      sIn * 2, pOut,             sOut);
-        r_fft_aux(half, wn * wn, pIn + sIn, sIn * 2, pOut + half * sOut, sOut);
+        r_fft_aux(n, wn * wn, pIn,      sIn * 2, pOut,             sOut);
+        r_fft_aux(n, wn * wn, pIn + sIn, sIn * 2, pOut + n * sOut, sOut);
 
         // Combine step
         complex_t w(1.0f, 0.0f);
-        for (int j = 0; j < half; ++j) {
-            complex_t even = pOut[j * sOut];
-            complex_t odd  = pOut[(j + half) * sOut];
-            complex_t t    = w * odd;
-            pOut[j * sOut]            = even + t;
-            pOut[(j + half) * sOut]  = even - t;
-            w *= wn;
+        for (int j = 0; j < n; ++j) {
+            complex_t t1 = w*pOut[n+j];
+            complex_t t2 = pOut[j]-t1;
+            pOut[j] = pOut[j]+t1;
+            pOut[j+n] = t2;
+            w = w*wn; 
         }
     }
 }

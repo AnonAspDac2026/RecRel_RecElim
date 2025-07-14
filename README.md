@@ -1,6 +1,6 @@
 # RecRel_RecElim
 
-This is an anonymous repository for a submission made to **ASPDAC 2026** for the paper:
+This is an anonymous repository for a submission made to **ASPDAC 2026**. For the paper:
 
 **"Automatic Recursion Elimination using Recurrence Relations for Synthesis of Stack-free Hardware"**
 
@@ -10,7 +10,7 @@ This repository contains:
 
 ## Building the Tool
 
-To build the analysis tool, run:
+To build the tool, run:
 
     make
 
@@ -28,9 +28,9 @@ The tool can be run manually as follows:
 
 ## Notes
 
-For some files, the following message may appear:
+For some files, when running the tool, the following error can be printed:
 
     undefined reference to `main'
     collect2: error: ld returned 1 exit status
 
-This is a **ROSE-specific warning** and has **no impact** on the correctness or output of the tool. It can safely be ignored.
+This is a **ROSE-specific warning** and has **no impact** on the output of the tool. It can be safely ignored.

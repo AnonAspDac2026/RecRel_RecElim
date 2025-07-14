@@ -1,5 +1,10 @@
 #include "header.hpp"
 
+/*
+ * This program was taken from HLSRecurse and modified. 
+ * D. B. Thomas, "Synthesisable recursion for C++ HLS tools," 
+ * doi: 10.1109/ASAP.2016.7760777. 
+ */
 
 using complex_t = std::complex<float>;
 

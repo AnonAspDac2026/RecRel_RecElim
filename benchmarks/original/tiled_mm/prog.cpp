@@ -1,5 +1,10 @@
 #include "header.hpp"
 
+/*
+ * This program was taken from HLSRecurse. 
+ * D. B. Thomas, "Synthesisable recursion for C++ HLS tools," 
+ * doi: 10.1109/ASAP.2016.7760777. 
+ */
 
 int sub(int v,int h, int stride, int n) {
     return v*stride*n/2+h*n/2; 

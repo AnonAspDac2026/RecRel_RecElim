@@ -1,5 +1,12 @@
 #include "header.hpp"
 
+
+/*
+ * This program was taken from HLSRecurse. 
+ * D. B. Thomas, "Synthesisable recursion for C++ HLS tools," 
+ * doi: 10.1109/ASAP.2016.7760777. 
+ */
+
 int isValid(int number, int *puzzle, int row, int column) {
     int i=0;
     int sectorRow = 3*(row/3);

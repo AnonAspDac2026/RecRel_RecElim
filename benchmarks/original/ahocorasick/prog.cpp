@@ -11,6 +11,11 @@
  * Aho, Alfred V.; Corasick, Margaret J. (June 1975). "Efficient string
  * matching: An aid to bibliographic search". Communications of the ACM.
  * 18 (6): 333–340. doi:10.1145/360825.360855. MR 0371172.
+ * 
+ * This version was take from HeteroRefactor. 
+ * Jason Lau, Aishwarya Sivaraman, Qian Zhang, Muhammad Ali Gulzar, 
+ * Jason Cong, and Miryung Kim. 2020. HeteroRefactor: refactoring 
+ * for heterogeneous computing with FPGA. https://doi.org/10.1145/3377811.3380340
  */
 struct node {
     int substring_index;

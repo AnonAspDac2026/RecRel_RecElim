@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+ * This program was taken from HeteroRefactor. 
+ * Jason Lau, Aishwarya Sivaraman, Qian Zhang, Muhammad Ali Gulzar, 
+ * Jason Cong, and Miryung Kim. 2020. HeteroRefactor: refactoring 
+ * for heterogeneous computing with FPGA. https://doi.org/10.1145/3377811.3380340
+ */
+
 using namespace std;
 
 struct node {

@@ -17,25 +17,20 @@ To build the analysis tool, run:
 ## Running the Benchmarks
 
 To run the selected set of benchmarks:
-```
+
     make test
-```
 
 ## General Usage
 
 The tool can be run manually as follows:
 
-```
     ./analysis_tool [optional: -I include_path] input_file output_file
-```
 
 ## Notes
 
 For some files, the following message may appear:
 
-```
     undefined reference to `main'
     collect2: error: ld returned 1 exit status
-```
 
 This is a **ROSE-specific warning** and has **no impact** on the correctness or output of the tool. It can safely be ignored.
